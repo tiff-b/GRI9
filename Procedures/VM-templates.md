@@ -6,6 +6,9 @@
 
 Il faut commencer par vérifier que windows est bien à jour. Ensuite, installer les VM tools comme d'ordinaire.
 
+Une fois toutes les mises à jour installées, on peut supprimer les fichiers intermédiaires et temporaires qui se trouvent dans C:\Windows\Software Distribution\Download\
+
+
 ### B. Utilisateurs
 
 #### 1. Activer utilisateur administrateur 
