@@ -52,7 +52,11 @@ Panneau de configuration (`control`) > Defender > Paramètres > Désactiver
 
 *Astuce* : passer en vue standard et ordonner les services par type de démarrage.
 
-### F. Manipulations diverses
+### F. Libérer espace disque
+
+* `cleanmgr` en cmd pour nettoyer le disque
+
+### G. Manipulations diverses
 
 * `sysdm.cpl` > Onglet Protection du système > Configurer > Désactiver et supprimer
 * `sysdm.cpl` > Onglet Paramètres du système avancés > Paramètres des performances > Onglet Effets visuels > Choisir Ajuster afin d'obtenir la meilleure performance
