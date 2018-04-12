@@ -11,6 +11,7 @@
 5. Automatic Pagefile
 6. Firewall always off
 7. Complex Password
+8. Check Time Zone + Locale Language
 
 ### B. Installer Active Directory Domain Service
 
