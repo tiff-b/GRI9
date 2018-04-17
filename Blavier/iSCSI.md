@@ -15,40 +15,11 @@
 
 ## Installation et configuration
 
-### Installation
-
-| **FreeNAS** | **Nas4Free** |
-|:------------|:-------------|
-|Install/Upgrade <br/> [space] pour sélectionner da0 <br/> Password 987654 <br/> Boot via BIOS <br/> Shutdown <br/> Retirer l'iso|9) Install/Upgrade <br /> 1) Install (Preferred) <br /> 1) Install (preferred) <br /> cd0 <br /> da0 <br /> 8192 <br /> Enter <br /> Shutdown <br /> Enlever iso| 
-
-### Configuration CLI
-
-| **FreeNAS** | **Nas4Free** |
-|:------------|:-------------|
-| Configure Network Interfaces <br /> Interface 1 <br /> No reset <br /> No DHCP <br /> Yes IPv4 <br /> em0 <br /> 192.168.162.11/24 <br /> No IPv6 | Configure Network IP Address <br /> No DHCP <br /> 192.168.162.4/24 <br /> 192.168.162.254 GTW  <br /> DNS : 192.168.231.8 <br /> No IPv6 | 
-
-### Configuration GUI
-
-User : root
-Password : 987654
-URL : http://192.168.162.11/
-
-Exit Wizard
-
-System > General :
-* Language : French
-* Keyboard Map : Belgian ISO-8859-1 (accent keys)
-* Timezone : Europe/Brussels 
-
-Network > Config générale
-* Hostname : freenas-11
-* Domain : nuage.gris
-* Gateway : 192.168.162.254
-* DNS : 192.168.231.8 - 192.168.231.10 - 192.168.4.254
-* Proxy : 192.168.4.4:8080
-
-Mise à jour :
-
-System > Mise à jour > Check Now (FreeNAS-11-STABLE)
-
+| Etapes | **FreeNAS** | **Nas4Free** |
+|:------:|:------------|:-------------|
+| **Installation** | Install/Upgrade <br/> [space] pour sélectionner da0 <br/> Password 987654 <br/> Boot via BIOS <br/> Shutdown <br/> Retirer l'iso | 9) Install/Upgrade <br /> 1) Install (Preferred) <br /> 1) Install (preferred) <br /> cd0 <br /> da0 <br /> 8192 <br /> Enter <br /> Shutdown <br /> Enlever iso | 
+| **Configuration CLI** | Configure Network Interfaces <br /> Interface 1 <br /> No reset <br /> No DHCP <br /> Yes IPv4 <br /> em0 <br /> 192.168.162.11/24 <br /> No IPv6 | Configure Network IP Address <br /> No DHCP <br /> 192.168.162.4/24 <br /> 192.168.162.254 GTW  <br /> DNS : 192.168.231.8 <br /> No IPv6 | 
+| **Acount infos** | User : root <br /> Password : 987654 <br /> URL : http://192.168.162.11/ | User : admin <br /> Password : nas4free <br /> URL : http://192.168.162.4/ |
+| **Configuration GUI** | System > General <br /> *Language* French <br /> *Keyboard* Belgian ISO-8859-1 <br /> *Timezone* Europe/Brussels <br /> Network > Configuration générale <br /> *Hostname* freenas-11 <br /> *Domain* nuage.gris <br /> *Gateway* 192.168.162.254 <br /> *DNS* 192.168.231.8 - 192.168.231.10 - 192.168.4.254 <br /> *Proxy* 192.168.4.4:8080 | System > General <br /> *Hostname* nas4free-11 <br /> *Domain* nuage.gris <br /> *Timezone* Europe/Brussels <br /> |
+| **Mise à jour** | System > Mise à jour > Check Now (FreeNAS-11-STABLE) | System > Firmware Update > Enable > Browse [NAS4Free-x64-embedded-11.1.0.4.5321.img.xz] > Update |
 
