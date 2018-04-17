@@ -23,3 +23,17 @@
 | **Configuration GUI** | System > General <br /> *Language* French <br /> *Keyboard* Belgian ISO-8859-1 <br /> *Timezone* Europe/Brussels <br /> Network > Configuration générale <br /> *Hostname* freenas-11 <br /> *Domain* nuage.gris <br /> *Gateway* 192.168.162.254 <br /> *DNS* 192.168.231.8 - 192.168.231.10 - 192.168.4.254 <br /> *Proxy* 192.168.4.4:8080 | System > General <br /> *Hostname* nas4free-11 <br /> *Domain* nuage.gris <br /> *Timezone* Europe/Brussels <br /> |
 | **Mise à jour** | System > Mise à jour > Check Now (FreeNAS-11-STABLE) | System > Firmware Update > Enable > Browse [NAS4Free-x64-embedded-11.1.0.4.5321.img.xz] > Update |
 
+## Mise en place du disque iSCSI
+
+À machine éteinte, ajouter un nouveau disque dur comme spécifié dans les pré-requis. Ensuite, rallumer le serveur.
+
+Nas4Free :
+
+Disk > Management > Import Disk > Apply Changes
+Services > iSCSI Target > Enabled
+
+* Portail Add : 1 - 0.0.0.0:3260
+* Initiator Add : 1 - ALL - 192.168.162.0/24
+* Auths : 
+* Media : par défaut
+
