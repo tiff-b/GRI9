@@ -11,9 +11,9 @@ Une GPO s'applique sur un Computeur / User :
 
 ## Status GPO
 
-Dans le détail d'un GPO,je peux modifier son status et lui demander de désactiver les clés Users ou Computers si ma GPO n'a que des clés Computers ou Users.
+Dans le détail d'un GPO, je peux modifier son status et lui demander de désactiver les clés Users ou Computers si ma GPO n'a que des clés Computers ou Users.
 
-## ADM - Ajouter des GPOs
+## ADM - Ajouter de nouvelles GPOs
 
 1. Copier le .admx dans C:\Windows\PolicyDefinitions et le .adml dans C:\Windows\PolicyDefinitions\en-US\
 
