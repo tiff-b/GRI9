@@ -105,3 +105,10 @@ Dans la partie Namespaces, on ajoute un Folder Target à un de nos folders. Il f
 Une fois la target ajoutée, on nous demande si on veut synchroniser. OUI, donc on a un wizard pour créer une politique de réplication. Pour le moment, NEXT, FULL MESH et REPLICATE FULL BANDSWISH.
 
 **!! Primary Member = partage qui va être copié sur notre nouvelle target. Si on inverse, on erase toutes nos data !!**
+
+## B. Remote Server Administration Tools
+
+*Depuis un client, permet de gérer les serveurs à distance.*
+
+1. Télécharger le .msu qui correspond à la version et la langue du client (FR 32bits)
+2. L'installer sur le client. On a maintenant accès aux consoles de management
