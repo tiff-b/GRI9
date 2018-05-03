@@ -13,7 +13,9 @@ Une GPO s'applique sur un Computeur / User :
 
 Dans le détail d'un GPO, je peux modifier son status et lui demander de désactiver les clés Users ou Computers si ma GPO n'a que des clés Computers ou Users.
 
-## ADM - Ajouter de nouvelles GPOs
+## Ajouter de nouvelles GPOs
+
+### ADM
 
 1. Copier le .admx dans C:\Windows\PolicyDefinitions et le .adml dans C:\Windows\PolicyDefinitions\en-US\
 
@@ -23,7 +25,7 @@ Dans le détail d'un GPO, je peux modifier son status et lui demander de désact
 2. Copier PolicyDefinitions dans C:\Windows\SYSVOL\sysvol\salle403.local\Policies\
 3. Copier PolicyDefinitions à la place du dossier qui existe déjà dans C:\Windows\ (remplacer et skip)
 
-## Listes de GPO
+## Listes de clés GPO
 
 #### Attention, si on change le status d'un service en automatique, son status se mettra à jour comme avec n'importe quelle règle MAIS la machine doit redémarrer pour que le service démarre.
 
@@ -55,6 +57,9 @@ Console de management : `gpmc`
 * **Password policy (méthode moderne)** : via la console `dsac`
 * **AppLocker (Pré-requis : min Win client enterprise | Application Identity service automatic) executable/scripts/...** : Computer > Policies > Windows Settings > Security Settings > Application Control Policies > AppLocker > [Types] - Create Default Rules | Add Rules pour des "exceptions". Publisher = autoriser/refuser selon l'éditeur. Hash = autoriser/refuser cet executable bien précis.
 * **Removable device** : User > Policies > Adminiistrative Templates > System > Removable Storage Access - All Removable Storage Classes: Deny All Access (Disabled dans keep cool et unabled dans Default User Settings)
+* **Ajouter des logiciels** : Policies > Software Settings > Software installation - New Package (.msi seulement !). On utilise un path pérénisé via un DFS. En ajoutant le .msi, dans l'onglet Modifications, il faut ajouter le fichier .mst de réponse.
+
+
 
 * **Changer la OU par defaut d'un nouvel ordinateur du domain** : ajouter un object computer dans AD. Attention, le nom de la machine doit correspondre au nom de l'object ! OU, par `adciedit` et modififier les entrailles de l'AD. Une fois la GPO link, on sera logoff/logon !
 
