@@ -61,10 +61,18 @@ Console de management : `gpmc`
 * **Icônes sur le bureau** : Computer/~~User~~ > Preferences > Windows Settings > Shortcuts (C:\Utilisateurs\Public\ fusion avec le profil utilisateur).
 * **Controle d'accès** : 
 * **Roaming profiles** : Select user dans `dsa` > Properties > Profile > Profile path - \\domain\namespace\Roaming\%username%
-
-
+* **Home Folders** : Select user dans `dsa` > Properties > Profile > Connect To - \\domain\namespace\Perso\%username%
 
 * **Changer la OU par defaut d'un nouvel ordinateur du domain** : ajouter un object computer dans AD. Attention, le nom de la machine doit correspondre au nom de l'object ! OU, par `adciedit` et modififier les entrailles de l'AD. Une fois la GPO link, on sera logoff/logon !
+
+
+### Gestion des datas
+
+1. Roaming profiles : paramètres et préférences
+2. Homes Folders : data
+  * Associé avec de la synchronisation (caching) pour avoir ses data aussi en local.
+
+User > Policies > Windows Settings > Folder Redirection. Pour chaque dossier, on properties - Basic - Create a folder - \\domain\namespace\Perso
 
 ## Registery
 
