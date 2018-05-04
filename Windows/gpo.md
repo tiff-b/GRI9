@@ -58,6 +58,9 @@ Console de management : `gpmc`
 * **AppLocker (Pré-requis : min Win client enterprise | Application Identity service automatic) executable/scripts/...** : Computer > Policies > Windows Settings > Security Settings > Application Control Policies > AppLocker > [Types] - Create Default Rules | Add Rules pour des "exceptions". Publisher = autoriser/refuser selon l'éditeur. Hash = autoriser/refuser cet executable bien précis.
 * **Removable device** : User > Policies > Adminiistrative Templates > System > Removable Storage Access - All Removable Storage Classes: Deny All Access (Disabled dans keep cool et unabled dans Default User Settings)
 * **Ajouter des logiciels** : Policies > Software Settings > Software installation - New Package (.msi seulement !). On utilise un path pérénisé via un DFS. En ajoutant le .msi, dans l'onglet Modifications, il faut ajouter le fichier .mst de réponse.
+* **Icônes sur le bureau** : Computer/~~User~~ > Preferences > Windows Settings > Shortcuts (C:\Utilisateurs\Public\ fusion avec le profil utilisateur).
+* **Controle d'accès** : 
+* **Roaming profiles** : Select user dans `dsa` > Properties > Profile > Profile path - \\domain\namespace\Roaming\%username%
 
 
 
