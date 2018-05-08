@@ -106,6 +106,27 @@ Une fois la target ajoutée, on nous demande si on veut synchroniser. OUI, donc 
 
 **!! Primary Member = partage qui va être copié sur notre nouvelle target. Si on inverse, on erase toutes nos data !!**
 
+## B. Print Server
+
+Console de management : `printmanagement.msc`
+
+1. Add Roles and Features
+2. Role-based or feature-based installation
+3. Sélectionner le Serveur
+4. Print and Document Services
+5. No Features
+6. Select Print Server
+7. Install
+
+Ou, on peut les ajouter manuellement.
+
+1. Ajouter une imprimante (Control > Add Printer > Attention, on imprime en A4 et pas en Letter)
+    * Si Microsoft n'a pas les pilotes, on les lui indique en Browse, version pour l'OS du serveur
+2. Partager l'imprimante
+3. Sur le client, on peut ajouter une imprimante et l'imprimante partagée et dans la liste. L'imprimante est liée au profil (roaming)
+    * Si Microsoft n'a pas les drivers, il faut les lui indiquer (Sharing > Additional Drivers) et lui ajouter les drivers pour les OS des clients (sur le serveur)
+4. GPO : Clic-droit Imprimante dans `printmanagement` > Deploy with GPO 
+
 ## B. Remote Server Administration Tools
 
 *Depuis un client, permet de gérer les serveurs à distance.*
