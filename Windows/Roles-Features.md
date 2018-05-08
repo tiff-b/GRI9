@@ -123,9 +123,11 @@ Ou, on peut les ajouter manuellement.
 1. Ajouter une imprimante (Control > Add Printer > Attention, on imprime en A4 et pas en Letter)
     * Si Microsoft n'a pas les pilotes, on les lui indique en Browse, version pour l'OS du serveur
 2. Partager l'imprimante
-3. Sur le client, on peut ajouter une imprimante et l'imprimante partagée et dans la liste. L'imprimante est liée au profil (roaming)
+3. Sur le client, on peut ajouter une imprimante et l'imprimante partagée est dans la liste. L'imprimante est liée au profil (roaming)
     * Si Microsoft n'a pas les drivers, il faut les lui indiquer (Sharing > Additional Drivers) et lui ajouter les drivers pour les OS des clients (sur le serveur)
 4. GPO : Clic-droit Imprimante dans `printmanagement` > Deploy with GPO 
+
+Remarque : on peut créer plusieurs printers pour un seul print device. Idée de profile derrière, permet de séparer les impressions couleurs/N&B/... Pour ajouter un printer, on ajoute une imprimante, sur le même port.
 
 ## B. Remote Server Administration Tools
 
