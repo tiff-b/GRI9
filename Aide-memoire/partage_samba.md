@@ -4,7 +4,7 @@
 
 1. Installer samba : `sudo apt-get install samba`
 2. Créer les dossiers à partager et vérifier les permissions
-3. Modifier le fichier `/etc/samba/smb.conf` en ajoutant un [bloc] pour chaque partage
+3. Modifier le fichier `/etc/samba/smb.conf` en ajoutant un [bloc] pour chaque partage. **REMARQUE, en cas de problème, il existe une copie du fichier de base dans /usr/share/samba/smb.conf**
 
 ```sh
 [share_name]
