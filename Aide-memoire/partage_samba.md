@@ -35,3 +35,4 @@ sudo service nmbd restart
 * `smbcliebt -L <host> -U <user>` : teste les partages pour l'utilisateur
 * `smbstatus` : affiche les infos des connections Samba actuelles
 * `nmblookup [<NetBIOS>] [-A <IP>]` : donne des infos spécifiques aux machines microsoft
+* `smbclient -U <user> //<host>/<share_name>` : connexion en ligne de commande (version terminal de la Connexion à un Serveur dans l'explorateur)
