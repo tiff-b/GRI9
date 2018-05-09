@@ -14,6 +14,7 @@
     read only = yes|no                          # OU writeable = no|yes
     valid users = utilisateur_autorisé 
               # = %s pour la variable username dans le répertoire home
+              # = @groups
     # OU guest ok = yes|no 
     create mode = 0644                          # (permission à la création d'un fichier)
     directory mode = 0755                       # (permission à la création d'un dossier)
