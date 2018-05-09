@@ -5,6 +5,7 @@
 1. Installer samba : `sudo apt-get install samba`
 2. Créer les dossiers à partager et vérifier les permissions
 3. Modifier le fichier `/etc/samba/smb.conf` en ajoutant un [bloc] pour chaque partage. **REMARQUE, en cas de problème, il existe une copie du fichier de base dans /usr/share/samba/smb.conf**
+4. Pour les paramètres de ce fichier, voir [https://www.samba.org/samba/docs/current/man-html/smb.conf.5.html](smb.conf)
 
 ```sh
 [share_name]
@@ -20,9 +21,9 @@
     directory mode = 0755                       # (permission à la création d'un dossier)
 ```
 
-4. Tester si nos blocs sont corrects avec `testparm`
-5. Si un utilisateur est spécifié, il faut l'ajouter aux utilisateurs samba : `smbpasswd -a user`
-6. Redémarrer les services
+5. Tester si nos blocs sont corrects avec `testparm`
+6. Si un utilisateur est spécifié, il faut l'ajouter aux utilisateurs samba : `smbpasswd -a user`
+7. Redémarrer les services
 
 ```shell
 sudo service smbd restart
