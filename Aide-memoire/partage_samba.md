@@ -1,5 +1,6 @@
 # Partager un dossier linux via samba
 
+## I. Partager un dossier
 
 1. Installer samba : `sudo apt-get install samba`
 2. Créer les dossiers à partager et vérifier les permissions
@@ -26,3 +27,9 @@
 sudo service smbd restart
 sudo service nmbd restart
 ```
+## II. Vérifier notre partage
+
+* `smbtree` : affiche les partages de tout le réseau
+* `testparm` : vérifie que nos blocs sont corrects
+* `smbcliebt -L <host> -U <user>` : teste les partages pour l'utilisateur <user>
+* `smbstatus` : affiche les infos des connections Samba actuelles
