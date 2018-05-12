@@ -55,6 +55,13 @@ Panneau de configuration (`control`) > Defender > Paramètres > Désactiver
 ### F. Libérer espace disque
 
 * `cleanmgr` en cmd pour nettoyer le disque
+* Commandes à taper en terminal
+
+```cmd
+Dism.exe /online /Cleanup-Image /StartComponentCleanup
+Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+Dism.exe /online /Cleanup-Image /SPSuperseded
+```
 
 ### G. Manipulations diverses
 
