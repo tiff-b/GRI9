@@ -1,13 +1,13 @@
 # Droits et Permissions
 
-# I. Notions
+## I. Notions
 
-## A. Différence droits/permissions
+### A. Différence droits/permissions
 
 * Droit = aptitude à pouvoir faire quelque chose (*Ex: ouvrir une session, changer l'heure*).
 * Permission (NTFS/Partage) = type d'accès que l'on ocroit à un dossier/fichier.
 
-## B. Groupe
+### B. Groupe
 
 *Un groupe est un objet qui contient d'autres objets.*
 
