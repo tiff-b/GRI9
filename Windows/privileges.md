@@ -21,7 +21,8 @@
 | **Groupe universel** (GU) | Grande<br />- *Exploitable sur la machine où il a été créé*<br />- *Exploitable dans la communauté de sécurité* | Très souple<br />- *Objet local*<br />- *Objet provenant d'une communauté de sécurité avec laquelle il y est en confiance* |
 
 - GLD = GL mais sur les DC
-- Attention aux ressources demandées par les GU.
+- Attention aux ressources systèmes demandées par les GU.
+- On essaie d'utiliser le plus souvent des groupes locaux (D) pour attribuer les permissions, c'est plus rapide. Politique AGLP.
 
 #### Types de groupes
 
