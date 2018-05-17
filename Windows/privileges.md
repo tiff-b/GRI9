@@ -5,11 +5,13 @@
 ### A. Différence droits/permissions
 
 * Droit = aptitude à pouvoir faire quelque chose (*Ex: ouvrir une session, changer l'heure*).
-* Permission (NTFS/Partage) = type d'accès que l'on ocroit à un dossier/fichier.
+* Permission (NTFS/Partage) = type d'accès que l'on octroit à un dossier/fichier.
 
-### B. Groupe
+### B. Groupes
 
 *Un groupe est un objet qui contient d'autres objets.*
+
+
 
 ## II. Sharing
 
@@ -17,11 +19,15 @@
 * La permission **change** implique **read** et équivaut à tous, sauf le changement des permissions.
 * La permission **full control** implique **read** et **change** et peut tout faire, même changer les permissions.
 
+Lorsqu'on est soumis à des permissions de partage et de NTFS, on est soumis aux permissions les plus restrictives.
+
+**Best practice** : Everyone = Change en sharing et on peaufine avec les permissions NTFS.
+
 ## III. NTFS
 
 Le NTFS est un format de fichiers qui nécessite l'attribution de permissions pour pouvoir y accéder. Une permission NTFS agit localement. Un Deny a toujours priorité sur un Allow.
 
-Si on est dans plusieurs groupes et que les permissions de ces groupes sont différentes, on cumule les permissions de chaque groupe (ADD et attention à la priorité du Deny).
+Si on est dans plusieurs groupes et que les permissions de ces groupes sont différentes, on cumule les permissions de chaque groupe (les plus permissives et attention à la priorité du Deny).
 
 ### A. Concepts élémentaires
 
