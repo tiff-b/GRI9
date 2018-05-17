@@ -9,9 +9,24 @@
 
 ### B. Groupes
 
-*Un groupe est un objet qui contient d'autres objets.*
+*Un groupe est un objet qui contient d'autres objets. Des privilèges appliqués à un groupe s'appliquent à tous les objets membres du groupes.*
 
+#### Portée des groupes
 
+| Type | Étendue | Membre |
+|:-----|:--------|:-------|
+| **Groupe local** (GL) | Limitée<br />- *Exploitable sur la machine où il a été créé* | Très souple<br />- *Objet local*<br />- *Objet provenant d'une communauté de sécurité avec laquelle il y est en confiance* |
+| **Groupe local domanial** (GLD) | Limitée<br />- *Exploitable entre les DC* | Très souple<br />- *Objet local*<br />- *Objet provenant d'une communauté de sécurité avec laquelle il y est en confiance* |
+| **Groupe global** (GG, +répandu) | Grande<br />- *Exploitable sur la machine où il a été créé*<br />- *Exploitable dans la communauté de sécurité* | Limité<br />- *Objet provenant de sa communauté de sécurité* |
+| **Groupe universel** (GU) | Grande<br />- *Exploitable sur la machine où il a été créé*<br />- *Exploitable dans la communauté de sécurité* | Très souple<br />- *Objet local*<br />- *Objet provenant d'une communauté de sécurité avec laquelle il y est en confiance* |
+
+- GLD = GL mais sur les DC
+- Attention aux ressources demandées par les GU.
+
+#### Types de groupes
+
+1. Sécurité : possède un id de sécurité et permet donc de se faire octroyer des privilèges. Peut aussi servir comme groupe de distribution.
+2. Distribution : permet pour la distribution d'informations (*ex : groupe de messagerie*). On peut le faire évoluer en sécurité mais pas l'inverse.
 
 ## II. Sharing
 
