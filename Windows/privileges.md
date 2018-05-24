@@ -74,4 +74,13 @@ De la plus restrictive à la plus laxiste :
 
 *Affiche uniquement les fichiers et dossiers auxquels un utilisateur a les permissions d'accéder (permission au minimum Read)*
 
+En GUI :
+
 Sur le file system : Server Manager > File and Storage Services > Shares > Dossier - Properties > Settings > Enable access-based enumeration
+
+En Powershell :
+
+```powershell
+set-smbshare -name ShareName -FolderEnumerationMode accessbased     # Enclencher
+set-smbshare -name ShareName -FolderEnumerationMode unrestricted    # Désenclencher
+```
