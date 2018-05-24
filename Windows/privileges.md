@@ -62,3 +62,16 @@ De la plus restrictive à la plus laxiste :
 5. M - Modify : modifier le contenu et contenant.
 6. Full Control : toutes celles d'avant, plus P (changer les permissions) et O (propriétaire).
 7. Special Permission : permissions personnalisées
+
+### C. Permissions avancées
+
+1. Applies to : où appliquer les permissions du groupe ? 
+2. 
+
+### D. Divers
+
+#### 1. Access-Based Enumeration
+
+*Affiche uniquement les fichiers et dossiers auxquels un utilisateur a les permissions d'accéder (permission au minimum Read)*
+
+Sur le file system : Server Manager > File and Storage Services > Shares > Dossier - Properties > Settings > Enable access-based enumeration
