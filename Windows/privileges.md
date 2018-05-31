@@ -35,6 +35,8 @@
 * La permission **change** implique **read** et équivaut à tous, sauf le changement des permissions.
 * La permission **full control** implique **read** et **change** et peut tout faire, même changer les permissions.
 
+Les permissions de partage sont gérées localement. On peut donc utiliser la théorie AGLP sans problème, même avec de la réplication.
+
 Lorsqu'on est soumis à des permissions de partage et de NTFS, on est soumis aux permissions les plus restrictives.
 
 **Best practice** : Everyone = Change en sharing et on peaufine avec les permissions NTFS.
