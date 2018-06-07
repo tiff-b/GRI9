@@ -50,3 +50,9 @@ sc \\SRV05 start dhcpserver   # Redémarre le service DHCP sur SRV05
 
 ### D. WINS
 
+1. Installer la feature
+2. `winsmgmt` > WINS - Add Server - SRV01. Dans chaque Replication Partners, on ajoute l'autre serveur.
+3. Client statique : on change l'adresse statique
+4. On change l'option dans `dhcpmgmt`
+5. On supprime nos Replication Partners
+6. On supprime la feature
