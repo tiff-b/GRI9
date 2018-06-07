@@ -56,3 +56,39 @@ sc \\SRV05 start dhcpserver   # Redémarre le service DHCP sur SRV05
 4. On change l'option dans `dhcpmgmt`
 5. On supprime nos Replication Partners
 6. On supprime la feature
+
+## III. FSMOs - Global Catalog
+
+### A. FSMOs
+
+*Rôles/missions joués uniquement par un DC **OU** l'autre.*
+
+Ils sont présents sur tous les DCs mais inactifs.
+
+* Rôles par foret :
+    1. **Domain Naming Master** : utilisé quand on modifie notre forêt (opération de topologie logique)
+    2. **Schema Master** : structure des objets dans la forêt
+* Rôles par domaine :
+    1. **Infrastructure Master** : gère la cohérence de l'appartenance d'objets à un groupe universel
+    2. **RID Master** : assigne un ID et un temps à chaque opération effectuée. Chaque DC a un panier d'ID différent. C'est le premier qui effectue l'opération qui la commit. 
+    3. **PDC Emulator** : 
+        * horloge temps du domaine
+        * PDC Emulator = émule l'ancien rôle du Primary Domain Controller. Rétrocomptabilité
+        * gestionnaire pour la configuration des GPOs
+
+On se place sur le DC qui va recevoir ces rôles :
+
+1. FSMOs domaine : `dsa` > Domain - Operations Masters > Et on change
+2. FSMOs forêt :
+    1. Domain Naming Master : `domain` : Active - Operations Master
+    2. Schema Master : `regsvr32 schmmgtm.dll` pour enregistrer schmmgtm dans la registerie. Puis `mmc` et ajout de AD Schema dans Console Root. Active - Change ADDC en celui qui va avoir le rôle. Active - Operation Masters. 
+
+### B. Global Catalog
+
+*Rôle joué par un DC **OU** l'autre. De base, tous les DC ont la case GC cochée*
+
+Permet de posséder un minimum des attributs des autres communautés. Gain de temps. `dssite`
+
+## IV. Dépremouvoir un DC
+
+1. Supprimer le role ADDC - Demote this Domain. On coche la proceed with removal pour le GC. On assigne à mot de passe à l'admin local qui sera créé. Et on demote.
