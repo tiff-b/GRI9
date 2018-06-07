@@ -63,6 +63,10 @@ sc \\SRV05 start dhcpserver   # Redémarre le service DHCP sur SRV05
 
 *Rôles/missions joués uniquement par un DC **OU** l'autre.*
 
+```cmd
+netdom query fsmo     # Afficher quel DC héberge les FSMO
+```
+
 Ils sont présents sur tous les DCs mais inactifs.
 
 * Rôles par foret :
