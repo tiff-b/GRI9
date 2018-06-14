@@ -99,6 +99,8 @@ On se place sur le DC qui va recevoir ces rôles :
 
 Permet de posséder un minimum des attributs des autres communautés. Gain de temps. `dssite`
 
+Remarque, dans la console `dssite`, il ne doit y avoir que des DCs dans la liste des serveurs. Si ce n'est pas le cas, on peut les supprimer sans regret.
+
 ## IV. Dépremouvoir un DC
 
 1. Supprimer le role ADDC - Demote this Domain. On coche la proceed with removal pour le GC. On assigne à mot de passe à l'admin local qui sera créé. Et on demote.
