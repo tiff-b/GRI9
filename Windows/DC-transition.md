@@ -13,15 +13,21 @@
 
 1. `dnsmgmt` > DNS - Connect to DNS > SRV05 > Vérifier que dans les propriétés de toutes les tables du DNS de SRV01 et SRV05 - Name Servers, il y a les 2 IPs.
 2. Vérifier aussi Zone Transfers - Check case et only to servers listed ...
-3. Dans les clients/members statiques, on indique notre autre serveur DNS. (Manuel ou avec un script/GPO)
-4. `dhcpmgmt` > Dans DHCP > SRV01 > IPv4 > Scope > Scope Options > Add un server DNS dans l'option 006. Le renouvellement se fera à bail demi temps.
+3. Dans la table Forward salle403 > Vérifier que l'options WINS soit avec la bonne adresse. Si bug :
+
+```powershell
+Remove-DNSServerResourceRecord -ZoneName salle403.local -Force -RRtype "WINS" -Name "@"
+```
+
+4. Dans les clients/members statiques, on indique notre autre serveur DNS. (Manuel ou avec un script/GPO)
+5. `dhcpmgmt` > Dans DHCP > SRV01 > IPv4 > Scope > Scope Options > Add un server DNS dans l'option 006. Le renouvellement se fera à bail demi temps.
 
 
 Best practice : dans `ncpa.cpl` du server, on indique l'autre DNS en DNS primaire, plutôt que lui-même. Qui devient donc le DNS secondaire. Au cas où l'autre server boot d'abord.
 
-Pour la migration, on supprime toutes les références au DNS qui va mourir. Ensuite, dans `dnsmgmt`, on revérifie toutes les tables et on enlève dans Name Servers l'ancien DC?
+Pour la migration, on supprime toutes les références au DNS qui va mourir. Ensuite, dans `dnsmgmt`, on revérifie toutes les tables et on enlève dans Name Servers l'ancien DC.
 
-5. Server Manager > Manage > Remove Role > Remove DNS
+6. Server Manager > Manage > Remove Role > Remove DNS
 
 ### B. DHCP
 
