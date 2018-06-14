@@ -21,6 +21,8 @@ Par conventions, les serveurs commencent par la fin de la plage disponible. Nos 
 
 * **ID résau global :** 10.50.16.16/28
 * **Gateway :** 10.50.16.17/28
+* **Première adresse IP disponible :** 10.50.16.17/26
+* **Dernière adresse IP disponible :** 10.50.16.30/26
 
 Par conventions, les serveurs commencent par la fin de la plage disponible. Nos clients sont clients DHCP.
 
