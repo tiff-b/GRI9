@@ -16,19 +16,19 @@ Modifier `/etc/yum.conf` et ajouter à la fin `proxy=http://192.168.4.4:8080`
 
 Modifier `/home/s602/.subversion/servers` : decommenter dans [global] et ajouter nos infos
 ```
-    [global]
-		http-proxy-host = 192.168.4.4
-		http-proxy-port = 8080
-		http-proxy-compression = no
+[global]
+http-proxy-host = 192.168.4.4
+http-proxy-port = 8080
+http-proxy-compression = no
 ```
 
 #### 4. wget
 
 Modifier `/etc/wgetrc` : décommenter les lignes et les compléter
 ```
-		https_proxy = http://192.168.4.4:8080/
-		http_proxy = http://192.168.4.4:8080/
-		ftp_proxy = http://192.168.4.4:8080/
+https_proxy = http://192.168.4.4:8080/
+http_proxy = http://192.168.4.4:8080/
+ftp_proxy = http://192.168.4.4:8080/
 ```
 
 ### B. Mettre à jour
