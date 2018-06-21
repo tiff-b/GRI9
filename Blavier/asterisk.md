@@ -79,11 +79,11 @@ sudo yum install -y epel-release dmidecode gcc-c++ ncurses-devel libxml2-devel m
 	  * `contrib/scripts/get_mp3_source.sh`
     * `./configure --libdir=/usr/lib64`
     * `make menuselect` et sélectionner :
-        - Addon: res config mysql et format_mp3
-	- Extras Sounds Packages : EN_WAV, EN_ALAW, EN_GSM, FR_WAV, FR_ALAW et FR_GSM
-	- Core sounds package: EN_WAV, EN_GSM, FR_WAV et FR_GMS
-	- Music on hold : Wave et GSM
-	- Save et Exit
+		- Addon: res config mysql et format_mp3
+		- Extras Sounds Packages : EN_WAV, EN_ALAW, EN_GSM, FR_WAV, FR_ALAW et FR_GSM
+		- Core sounds package: EN_WAV, EN_GSM, FR_WAV et FR_GMS
+		- Music on hold : Wave et GSM
+		- Save et Exit
     * `make`
     * `sudo make install`
     * `sudo make samples`
