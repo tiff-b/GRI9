@@ -78,8 +78,7 @@ sudo yum install -y epel-release dmidecode gcc-c++ ncurses-devel libxml2-devel m
 2. Créer un dossier asterisk
 3. Désarchiver l'archive dans le dossier asterisk
 4. Depuis le dossier asterisk
-	  * `contrib/scripts/get_mp3_source.sh`
-	  * *Remarque : si .subversion était dans /root/ plutôt que dans /home/s602/, il faudra préfixer la commande avec un sudo*
+	  * `contrib/scripts/get_mp3_source.sh` (*Remarque : si .subversion était dans /root/ plutôt que dans /home/s602/, il faudra préfixer la commande avec un sudo*)
     * `./configure --libdir=/usr/lib64`
     * `make menuselect` et sélectionner :
 		- Addon: res config mysql et format_mp3
