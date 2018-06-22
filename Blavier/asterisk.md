@@ -14,6 +14,8 @@ Modifier `/etc/yum.conf` et ajouter à la fin `proxy=http://192.168.4.4:8080`
 
 #### 3. SVN
 
+*Remarque : si le dossier n'existe pas, vérifier chez /root/.subversion et si toujours pas, continuer jusqu'à l'étape get_mp3_source puis revenir.*
+
 Modifier `/home/s602/.subversion/servers` : decommenter dans [global] et ajouter nos infos
 ```
 [global]
@@ -77,6 +79,7 @@ sudo yum install -y epel-release dmidecode gcc-c++ ncurses-devel libxml2-devel m
 3. Désarchiver l'archive dans le dossier asterisk
 4. Depuis le dossier asterisk
 	  * `contrib/scripts/get_mp3_source.sh`
+	  * *Remarque : si .subversion était dans /root/ plutôt que dans /home/s602/, il faudra préfixer la commande avec un sudo*
     * `./configure --libdir=/usr/lib64`
     * `make menuselect` et sélectionner :
 		- Addon: res config mysql et format_mp3
