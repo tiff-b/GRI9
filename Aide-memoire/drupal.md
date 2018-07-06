@@ -1,4 +1,4 @@
-# Drupal
+# Installation Drupal
 
 ## Script d'installation
 
@@ -116,3 +116,12 @@ fi
 	* Views UI
 	
 ### Modules à configurer
+
+# Backup drupal et mise à jour
+
+1. Mettre le site hors ligne 
+	* Via le site : Configuration > Mode maintenance - Mettre le site en maintenance
+	* En CLI : `sudo drush vset maintenance_mode 1 # 0 pour sortir du mode maintenance.`
+2. Depuis /var/www/itcorail.be `sudo drush sql-dump [--gzip] --result-file=/home/tiffanie/itcorail_backup_060718`
+3. Mettre à jour drupal `sudo drush up drupal -y`
+4. Remettre le site en ligne
