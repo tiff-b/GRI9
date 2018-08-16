@@ -2,7 +2,7 @@
 
 ## I. Configuration de base
 
-```bash
+```
 Switch> enable                  ᐅ Switch# 
 Switch# configure terminal      ᐅ Switch(config)# 
 Switch(config)# line console 0  ᐅ Switch(config-line)#
