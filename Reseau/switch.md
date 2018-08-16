@@ -26,7 +26,7 @@ Switch(config)# line vty 015    ᐅ Switch(config-line)#
 5. Configuration SSH :
     - Nom de domaine : `(config)# ip domain-name <domain.ext>`
     - User : `(config)# username <user> secret <password>`
-    - Clé : `(config)# crypto key generate ?` pour savoir quoi utiliser + `(config)# crypto key generate <modulus|general-keys>`
+    - Clé : `(config)# crypto key generate rsa ?` pour savoir quoi utiliser + `(config)# crypto key generate <modulus 1024|general-keys 1024>`
     - Version 2 : `(config)# ip ssh version 2` + `(config)# show ip ssh` pour vérifier la version
 6. Message d'infos ne coupent pas le prompt dans port console : `(config-line)# logging synchronous`
 7. Sauvegarder la configuration : `(config)# copy running-config startup-config`
